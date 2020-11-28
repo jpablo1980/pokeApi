@@ -3548,50 +3548,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -47873,7 +47829,7 @@ var staticRenderFns = [
                   {
                     staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
                   },
-                  [_vm._v("Pikachu")]
+                  [_vm._v("\n          Pikachu\n        ")]
                 )
               ]
             )
@@ -47889,12 +47845,16 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "absolute inset-0 transform hover:rotate-90 hover:scale-75 transition duration-300"
+                  "absolute inset-0 transform hover:scale-75 transition duration-300"
               },
               [
-                _c("div", {
-                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                })
+                _c(
+                  "div",
+                  {
+                    staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                  },
+                  [_vm._v("\n          Pikachu\n        ")]
+                )
               ]
             )
           ]),
@@ -47909,12 +47869,16 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "absolute inset-0 transform hover:rotate-45 transition duration-300"
+                  "absolute inset-0 transform hover:scale-75 transition duration-300"
               },
               [
-                _c("div", {
-                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                })
+                _c(
+                  "div",
+                  {
+                    staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                  },
+                  [_vm._v("\n          Pikachu\n        ")]
+                )
               ]
             )
           ]),
@@ -47929,92 +47893,16 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "absolute inset-0 transform hover:-rotate-45 transition duration-300"
+                  "absolute inset-0 transform hover:scale-75 transition duration-300"
               },
               [
-                _c("div", {
-                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
-            _c("div", {
-              staticClass:
-                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "absolute inset-0 transform origin-left hover:-rotate-45 transition duration-300"
-              },
-              [
-                _c("div", {
-                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
-            _c("div", {
-              staticClass:
-                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "absolute inset-0 transform hover:-translate-x-10 transition duration-300"
-              },
-              [
-                _c("div", {
-                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
-            _c("div", {
-              staticClass:
-                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "absolute inset-0 transform hover:rotate-90 hover:translate-x-full hover:scale-150 transition duration-300"
-              },
-              [
-                _c("div", {
-                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
-            _c("div", {
-              staticClass:
-                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "absolute inset-0 transform hover:skew-y-12 transition duration-300"
-              },
-              [
-                _c("div", {
-                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                })
+                _c(
+                  "div",
+                  {
+                    staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                  },
+                  [_vm._v("\n          Pikachu\n        ")]
+                )
               ]
             )
           ])
