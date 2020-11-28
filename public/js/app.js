@@ -3471,6 +3471,127 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -47659,42 +47780,249 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container mt-10" }, [
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.pokemon,
-          expression: "pokemon"
-        }
-      ],
-      staticClass:
-        "w-1/3 h-10 px-3 mx-1 rounded focus:outline-none focus:shadow-outline text-l shadow-lg",
-      attrs: { type: "search", placeholder: "Search Pokemon Names" },
-      domProps: { value: _vm.pokemon },
-      on: {
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.pokemon = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c(
-      "button",
-      {
-        staticClass:
-          "h-10 rounded bg-blue-400 hover:bg-blue-500 text-gray-800 font-bold py-0 px-4 mx-10 inline-flex items-center",
-        on: { click: _vm.pokeSearch }
-      },
-      [_vm._v("\n    Search\n  ")]
-    )
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "div",
+        {
+          staticClass: "w-full bg-gray-600 bg-no-repeat",
+          staticStyle: {
+            "background-blend-mode": "multiply",
+            "background-position": "center center",
+            "background-size": "100% auto",
+            "background-image":
+              "url('https://g2qkq20j3w22tgg8w3w482sr-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Pokemon_go_banner.png')"
+          }
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "p-10 py-20 flex flex-col flex-wrap justify-center content-center"
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "m-0 p-0 text-3xl text-white antialiased text-center"
+                },
+                [_vm._v("\n        Pokedex\n      ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "m-0 p-0 text-xl text-white antialiased text-center"
+                },
+                [_vm._v("\n        Search your favourite Pokemon\n      ")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "mt-3 flex flex-row flex-wrap" }, [
+                _c("input", {
+                  staticClass:
+                    "text-gray-600 w-2/3 p-2 rounded-l-lg focus:outline-none",
+                  attrs: { type: "text", placeholder: "pokemon name" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "p-2 w-1/3 bg-red-500 focus:outline-none rounded-r-lg text-white hover:bg-red-600",
+                    attrs: { type: "button" }
+                  },
+                  [_vm._v("\n          Search\n        ")]
+                )
+              ])
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "section",
+        {
+          staticClass:
+            "p-10 min-h-full flex md:flex-row items-center justify-around bg-red-500 flex-wrap sm:flex-col"
+        },
+        [
+          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
+            _c("div", {
+              staticClass:
+                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "absolute inset-0 transform hover:scale-75 transition duration-300"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                  },
+                  [_vm._v("Pikachu")]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
+            _c("div", {
+              staticClass:
+                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "absolute inset-0 transform hover:rotate-90 hover:scale-75 transition duration-300"
+              },
+              [
+                _c("div", {
+                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
+            _c("div", {
+              staticClass:
+                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "absolute inset-0 transform hover:rotate-45 transition duration-300"
+              },
+              [
+                _c("div", {
+                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
+            _c("div", {
+              staticClass:
+                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "absolute inset-0 transform hover:-rotate-45 transition duration-300"
+              },
+              [
+                _c("div", {
+                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
+            _c("div", {
+              staticClass:
+                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "absolute inset-0 transform origin-left hover:-rotate-45 transition duration-300"
+              },
+              [
+                _c("div", {
+                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
+            _c("div", {
+              staticClass:
+                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "absolute inset-0 transform hover:-translate-x-10 transition duration-300"
+              },
+              [
+                _c("div", {
+                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
+            _c("div", {
+              staticClass:
+                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "absolute inset-0 transform hover:rotate-90 hover:translate-x-full hover:scale-150 transition duration-300"
+              },
+              [
+                _c("div", {
+                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
+            _c("div", {
+              staticClass:
+                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "absolute inset-0 transform hover:skew-y-12 transition duration-300"
+              },
+              [
+                _c("div", {
+                  staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
+                })
+              ]
+            )
+          ])
+        ]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
