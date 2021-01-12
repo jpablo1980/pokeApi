@@ -10,14 +10,10 @@ use App\Models\Pokemon;
 
 
 class PokemonController extends Controller {
-    
-    public function index() {
-        $client = new Client();
-        $res = $client->request('GET', 'https://pokeapi.co/api/v2/pokemon');
-        $data = json_decode($res->getBody());
 
-        //dd($data->results);
-        return Inertia::render('Pokemon', ['data' => $data]);
+    public function index(Request $request) {
+
+        return Pokemon::orderBy('created_at', 'DESC')->get();
     }
 
     /**
@@ -26,9 +22,7 @@ class PokemonController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request) {
-        $pokemon = new Pokemon();
-        $pokemon->name = $request->name;
-        $pokemon->save();
+//
     }
 
     /**
@@ -38,7 +32,13 @@ class PokemonController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        $pokemon = new Pokemon;
+        $pokemon->name = $request->pokemon["name"];
+        $pokemon->type = $request->pokemon["type"];
+        $pokemon->height = $request->pokemon["height"];
+        $pokemon->weight = $request->pokemon["weight"];
+        $pokemon->save();
+        return $pokemon;
     }
 
     /**

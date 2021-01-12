@@ -3445,6 +3445,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Poke.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Poke.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["data"]
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pokemon.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Pokemon.vue?vue&type=script&lang=js& ***!
@@ -3514,52 +3533,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      pokemon: ""
+      pokemon: 'espeon',
+      search: null
     };
   },
   props: ["data"],
   methods: {
     pokeSearch: function pokeSearch() {
-      if (this.pokemon == this.$props.data.name) {
-        console.log(this.pokemon);
-      }
+      this.pokemon = this.search;
     }
   }
 });
@@ -47721,6 +47705,30 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Poke.vue?vue&type=template&id=b3f8cb7c&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Poke.vue?vue&type=template&id=b3f8cb7c& ***!
+  \**************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_vm._v("HEj")])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Pokemon.vue?vue&type=template&id=3578f3ba&":
 /*!*****************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Pokemon.vue?vue&type=template&id=3578f3ba& ***!
@@ -47736,179 +47744,135 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c(
+      "div",
+      {
+        staticClass: "w-full bg-gray-600 bg-no-repeat",
+        staticStyle: {
+          "background-blend-mode": "multiply",
+          "background-position": "center center",
+          "background-size": "100% auto",
+          "background-image":
+            "url('https://g2qkq20j3w22tgg8w3w482sr-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Pokemon_go_banner.png')"
+        }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "p-10 py-20 flex flex-col flex-wrap justify-center content-center"
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "m-0 p-0 text-3xl text-white antialiased text-center"
+              },
+              [_vm._v("\n                Pokedex\n            ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "m-0 p-0 text-xl text-white antialiased text-center"
+              },
+              [
+                _vm._v(
+                  "\n                Search your favourite Pokemon\n            "
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-3 flex flex-row flex-wrap" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.search,
+                    expression: "search"
+                  }
+                ],
+                staticClass:
+                  "text-gray-600 w-2/3 p-2 rounded-l-lg focus:outline-none",
+                attrs: {
+                  type: "search",
+                  name: "search",
+                  placeholder: "pokemon name"
+                },
+                domProps: { value: _vm.search },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.search = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "p-2 w-1/3 bg-red-500 focus:outline-none rounded-r-lg text-white hover:bg-red-600",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.pokeSearch()
+                    }
+                  }
+                },
+                [_vm._v("\n                    Search\n                ")]
+              )
+            ])
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _vm._m(0)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "div",
-        {
-          staticClass: "w-full bg-gray-600 bg-no-repeat",
-          staticStyle: {
-            "background-blend-mode": "multiply",
-            "background-position": "center center",
-            "background-size": "100% auto",
-            "background-image":
-              "url('https://g2qkq20j3w22tgg8w3w482sr-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Pokemon_go_banner.png')"
-          }
-        },
-        [
+    return _c(
+      "section",
+      {
+        staticClass:
+          "p-10 min-h-full flex md:flex-row items-center justify-around bg-red-500 flex-wrap sm:flex-col"
+      },
+      [
+        _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
+          _c("div", {
+            staticClass:
+              "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
+          }),
+          _vm._v(" "),
           _c(
             "div",
             {
               staticClass:
-                "p-10 py-20 flex flex-col flex-wrap justify-center content-center"
+                "absolute inset-0 transform hover:scale-75 transition duration-300"
             },
             [
               _c(
                 "div",
-                {
-                  staticClass:
-                    "m-0 p-0 text-3xl text-white antialiased text-center"
-                },
-                [_vm._v("\n        Pokedex\n      ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "m-0 p-0 text-xl text-white antialiased text-center"
-                },
-                [_vm._v("\n        Search your favourite Pokemon\n      ")]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-3 flex flex-row flex-wrap" }, [
-                _c("input", {
-                  staticClass:
-                    "text-gray-600 w-2/3 p-2 rounded-l-lg focus:outline-none",
-                  attrs: { type: "text", placeholder: "pokemon name" }
-                }),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass:
-                      "p-2 w-1/3 bg-red-500 focus:outline-none rounded-r-lg text-white hover:bg-red-600",
-                    attrs: { type: "button" }
-                  },
-                  [_vm._v("\n          Search\n        ")]
-                )
-              ])
+                { staticClass: "h-full w-full bg-white rounded-lg shadow-2xl" },
+                [_vm._v("\n                    Pikachu\n                ")]
+              )
             ]
           )
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "section",
-        {
-          staticClass:
-            "p-10 min-h-full flex md:flex-row items-center justify-around bg-red-500 flex-wrap sm:flex-col"
-        },
-        [
-          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
-            _c("div", {
-              staticClass:
-                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "absolute inset-0 transform hover:scale-75 transition duration-300"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                  },
-                  [_vm._v("\n          Pikachu\n        ")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
-            _c("div", {
-              staticClass:
-                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "absolute inset-0 transform hover:scale-75 transition duration-300"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                  },
-                  [_vm._v("\n          Pikachu\n        ")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
-            _c("div", {
-              staticClass:
-                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "absolute inset-0 transform hover:scale-75 transition duration-300"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                  },
-                  [_vm._v("\n          Pikachu\n        ")]
-                )
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "h-32 w-32 relative cursor-pointer mb-5" }, [
-            _c("div", {
-              staticClass:
-                "absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "absolute inset-0 transform hover:scale-75 transition duration-300"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass: "h-full w-full bg-white rounded-lg shadow-2xl"
-                  },
-                  [_vm._v("\n          Pikachu\n        ")]
-                )
-              ]
-            )
-          ])
-        ]
-      )
-    ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -62903,6 +62867,8 @@ var map = {
 	"./API/Index.vue": "./resources/js/Pages/API/Index.vue",
 	"./Dashboard": "./resources/js/Pages/Dashboard.vue",
 	"./Dashboard.vue": "./resources/js/Pages/Dashboard.vue",
+	"./Poke": "./resources/js/Pages/Poke.vue",
+	"./Poke.vue": "./resources/js/Pages/Poke.vue",
 	"./Pokemon": "./resources/js/Pages/Pokemon.vue",
 	"./Pokemon.vue": "./resources/js/Pages/Pokemon.vue",
 	"./Profile/DeleteUserForm": "./resources/js/Pages/Profile/DeleteUserForm.vue",
@@ -63143,6 +63109,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_097ba13b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_097ba13b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Poke.vue":
+/*!*************************************!*\
+  !*** ./resources/js/Pages/Poke.vue ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Poke_vue_vue_type_template_id_b3f8cb7c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Poke.vue?vue&type=template&id=b3f8cb7c& */ "./resources/js/Pages/Poke.vue?vue&type=template&id=b3f8cb7c&");
+/* harmony import */ var _Poke_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Poke.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Poke.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Poke_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Poke_vue_vue_type_template_id_b3f8cb7c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Poke_vue_vue_type_template_id_b3f8cb7c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Poke.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Poke.vue?vue&type=script&lang=js&":
+/*!**************************************************************!*\
+  !*** ./resources/js/Pages/Poke.vue?vue&type=script&lang=js& ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Poke_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Poke.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Poke.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Poke_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Poke.vue?vue&type=template&id=b3f8cb7c&":
+/*!********************************************************************!*\
+  !*** ./resources/js/Pages/Poke.vue?vue&type=template&id=b3f8cb7c& ***!
+  \********************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Poke_vue_vue_type_template_id_b3f8cb7c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Poke.vue?vue&type=template&id=b3f8cb7c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Poke.vue?vue&type=template&id=b3f8cb7c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Poke_vue_vue_type_template_id_b3f8cb7c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Poke_vue_vue_type_template_id_b3f8cb7c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
