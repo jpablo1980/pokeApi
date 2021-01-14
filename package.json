@@ -25,6 +25,7 @@
         "tailwindcss": "^1.8.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10",
-        "webpack-livereload-plugin": "^1.2.0"
+        "webpack-livereload-plugin": "^1.2.0",
+        "vue-loader": "^15.5.1"
     }
 }

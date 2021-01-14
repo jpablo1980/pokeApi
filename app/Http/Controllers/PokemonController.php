@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 use GuzzleHttp\Message\Response;
 use GuzzleHttp\Client;
@@ -10,15 +11,14 @@ use App\Models\Pokemon;
 
 
 class PokemonController extends Controller {
-    
-    public function index() {
-        $client = new Client();
-        $res = $client->request('GET', 'https://pokeapi.co/api/v2/pokemon');
-        $data = json_decode($res->getBody());
 
-        //dd($data->results);
+    public function index(Request $request) {
+
+        $data =  Pokemon::all();
+
         return Inertia::render('Pokemon', ['data' => $data]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -26,9 +26,7 @@ class PokemonController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request) {
-        $pokemon = new Pokemon();
-        $pokemon->name = $request->name;
-        $pokemon->save();
+//
     }
 
     /**
@@ -38,7 +36,13 @@ class PokemonController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        $pokemon = new Pokemon;
+        $pokemon->name = $request->pokemon["name"];
+        $pokemon->type = $request->pokemon["type"];
+        $pokemon->height = $request->pokemon["height"];
+        $pokemon->weight = $request->pokemon["weight"];
+        $pokemon->save();
+        return $pokemon;
     }
 
     /**
@@ -47,8 +51,12 @@ class PokemonController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
-        //
+    public function show(Pokemon $pokemon) {
+
+        $brf = $brf->load(["people.food", "people.drink"]);
+        $brfs = Brf::with("people")->get();
+
+        return Inertia::render('PokemonDetail', ['brf' => $brf, 'brfs' => $brfs]);
     }
 
     /**
