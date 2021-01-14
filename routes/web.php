@@ -15,5 +15,6 @@ use App\Http\Controllers\PokemonController;
 */
 
 Route::get('/', [PokemonController::class, 'index'])->name('index');
+Route::get('/{pokemon}', [PokemonController::class, 'show'])->name('show-pokemon');
 Route::post('/store', [PokemonController::class, 'store'])->name('store');
 

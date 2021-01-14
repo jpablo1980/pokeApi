@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 use GuzzleHttp\Message\Response;
 use GuzzleHttp\Client;
@@ -13,8 +14,11 @@ class PokemonController extends Controller {
 
     public function index(Request $request) {
 
-        return Pokemon::orderBy('created_at', 'DESC')->get();
+        $data =  Pokemon::all();
+
+        return Inertia::render('Pokemon', ['data' => $data]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -47,8 +51,12 @@ class PokemonController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
-        //
+    public function show(Pokemon $pokemon) {
+
+        $brf = $brf->load(["people.food", "people.drink"]);
+        $brfs = Brf::with("people")->get();
+
+        return Inertia::render('PokemonDetail', ['brf' => $brf, 'brfs' => $brfs]);
     }
 
     /**

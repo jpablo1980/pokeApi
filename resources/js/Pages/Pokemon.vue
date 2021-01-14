@@ -36,41 +36,36 @@
                 </div>
             </div>
         </div>
-        <!-- animation -->
-        <section
-            class="p-10 min-h-full flex md:flex-row items-center justify-around bg-red-500 flex-wrap sm:flex-col"
-        >
-            <!-- scale -->
-            <div class="h-32 w-32 relative cursor-pointer mb-5">
-                <div
-                    class="absolute inset-0 bg-white opacity-25 rounded-lg shadow-2xl"
-                ></div>
-                <div
-                    class="absolute inset-0 transform hover:scale-75 transition duration-300"
-                >
-                    <div class="h-full w-full bg-white rounded-lg shadow-2xl">
-                        Pikachu
-                    </div>
-                </div>
-            </div>
-
-        </section>
+        <PokemonDetail v-if="pokemonData" :data = "data" :pokemonData = "pokemonData"/>
     </div>
 </template>
 
 <script>
+import PokemonDetail from './PokemonDetail'
 export default {
-
+    components: {
+        PokemonDetail,
+    },
+    mounted() {
+        console.log("Component mounted")
+    },
     data() {
         return {
-            pokemon: 'espeon',
-            search: null,
+            search: "",
+            pokemonData: "",
         };
     },
-    props: ["data"],
+    props: ['data'],
     methods: {
-        pokeSearch() {
-            this.pokemon = this.search;
+       async pokeSearch() {
+           try {
+            await axios
+                .get(`https://pokeapi.co/api/v2/pokemon/${this.search.toLowerCase()}`)
+                .then(response => (this.pokemonData = response))
+            console.log(this.pokemonData.data);
+           } catch(error) {
+           alert('Pokemon finns inte')
+           }
         },
     },
 };
