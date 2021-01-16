@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PokemonController;
+use App\Models\Pokemon;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,12 @@ use App\Http\Controllers\PokemonController;
 |
 */
 
+// Pokemon::whereName($pokemon)->get();
+
+// /test/pickachu
+
+
 Route::get('/', [PokemonController::class, 'index'])->name('index');
-Route::get('/{pokemon}', [PokemonController::class, 'show'])->name('show-pokemon');
-Route::post('/store', [PokemonController::class, 'store'])->name('store');
+Route::put('/pokemon/{search}', [PokemonController::class, 'store'])->name('store');
+Route::get('/{search}', [PokemonController::class, 'show'])->name('show');
 
