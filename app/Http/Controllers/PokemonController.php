@@ -4,19 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use GuzzleHttp\Message\Response;
 use GuzzleHttp\Client;
 use App\Models\Pokemon;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 
 class PokemonController extends Controller {
 
     public function index(Request $request) {
 
-        $data =  Pokemon::all();
-
-        return Inertia::render('Pokemon', ['data' => $data]);
+        return Inertia::render('Pokemon');
     }
 
 
@@ -26,43 +28,76 @@ class PokemonController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request) {
-//
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     * @param Pokemon $pokemon
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
-        $pokemon = new Pokemon;
-        $pokemon->name = $request->pokemon["name"];
-        $pokemon->type = $request->pokemon["type"];
-        $pokemon->height = $request->pokemon["height"];
-        $pokemon->weight = $request->pokemon["weight"];
-        $pokemon->save();
-        return $pokemon;
+    public function store(string $search) {
+    //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function show(Pokemon $pokemon) {
+    public function show(string $search) {
+        // Instance of Pokemon model.
+        $pok = Pokemon::where('name', $search)->first();
+        if ($pok) {
+            //return Inertia...... PokemonDetail
+            return Inertia::render('PokemonDetail', ['pokemon' => $pok]);
+        }
 
-        $brf = $brf->load(["people.food", "people.drink"]);
-        $brfs = Brf::with("people")->get();
+        // Om vi kom hit.. Fanns ingen pokemon i Databasen.
+        // Kör en APi request.
+        // Array med 17st ....
 
-        return Inertia::render('PokemonDetail', ['brf' => $brf, 'brfs' => $brfs]);
+        $response = Http::get('https://pokeapi.co/api/v2/pokemon/' . $search);
+        $pokemonData = $response->json();
+
+        if ($pokemonData != null) {
+            $response = Http::get('https://pokeapi.co/api/v2/pokemon-species/' . $pokemonData['name']);
+            $description = $response->json();
+            //dd($pokemonData);
+            //dd($description);
+            $pokemon = new Pokemon;
+            //dd($pokemon);
+            $pokemon->name = $pokemonData['name'];
+            //dd($pokemon->name);
+            $pokemon->type = $pokemonData['types'][0]['type']['name'];
+            //dd($pokemon->type);
+            $pokemon->height = $pokemonData['height'];
+            $pokemon->weight = $pokemonData['weight'];
+            $pokemon->description = $description['flavor_text_entries'][7]['flavor_text'];
+            $pokemon->image = $pokemonData['sprites']['other']['official-artwork']['front_default'];
+            //dd($pokemon->image);
+            $pokemon->save();
+            return Inertia::render('PokemonDetail', ['pokemon' => $pokemon]);
+        }
+
+
+        return Redirect::route('index');
+
+        //return Redirect::route('show',  ['pokemon' => $pokemon],303);
+        // Sen kan vi redirecta ned Inertia Redirect?? Till våra nya pokemon.. Eller bara köra Intertia Render..
+
+
+        //return Redirect::route('store', ['search' => $search, 'data' => $data], 303);
+        //return response()->json([]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id) {
@@ -72,8 +107,8 @@ class PokemonController extends Controller {
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
@@ -83,7 +118,7 @@ class PokemonController extends Controller {
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id) {

@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61715e1c-b0fb-4b7e-8aef-ff23bc29f4a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/PokemonDetail.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_15_201346_add_fields_to_pokemon_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PokemonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PokemonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Pokemon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Pokemon.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Poke.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Pages/Pokemon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Pokemon.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/PokemonDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/PokemonDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,6 +167,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -185,7 +188,11 @@
       <workItem from="1608544557264" duration="15000" />
       <workItem from="1609413812178" duration="8522000" />
       <workItem from="1610451272564" duration="1552000" />
-      <workItem from="1610462648471" duration="22183000" />
+      <workItem from="1610462648471" duration="28206000" />
+      <workItem from="1610666804280" duration="18477000" />
+      <workItem from="1610734142610" duration="10798000" />
+      <workItem from="1610807326680" duration="1976000" />
+      <workItem from="1610823891151" duration="2404000" />
     </task>
     <servers />
   </component>
